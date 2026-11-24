@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the five elements of traditional Chinese medicine, their cycles, and how they appear in qigong and kung fu.">
+  <title>Five Elements · Wǔ Xíng</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="elements.js" defer></script>
+</head>
+<body>
+  <main class="atlas">
+    <header class="masthead">
+      <a class="brand" href="./"><span class="seal" lang="zh">五行</span><span>Wǔ Xíng</span></a>
+      <nav aria-label="Page"><a href="#cycles">Cycles</a><a href="#sources">Sources</a></nav>
+    </header>
+
+    <section class="explorer" aria-labelledby="title">
+      <div class="intro">
+        <p class="eyebrow">Traditional Chinese medicine</p>
+        <h1 id="title">Five<br class="desktop-break"> Elements</h1>
+        <p class="intro-copy">Wood, Fire, Earth, Metal, and Water describe five phases of change. Follow the arrows to see how each phase nourishes and restrains another.</p>
+        <div class="practice">
+          <label class="eyebrow" for="practice">Practice</label>
+          <select id="practice">
+            <option value="tcm">Traditional Chinese medicine</option>
+            <optgroup label="Qigong (Chi Gung)"><option value="frolics">Five Animal Frolics · Wǔ Qín Xì</option></optgroup>
+            <optgroup label="Kung fu"><option value="sengmen">Sēngmén · Five Animal Fists</option><option value="xingyi">Xíngyìquán · Five Fists</option></optgroup>
+          </select>
+          <p id="practice-note" aria-live="polite">Explore how each phase is associated with a season, a color, and a pair of organs.</p>
+        </div>
+      </div>
+
+      <div class="chart-panel">
+        <div class="chart-header">
+          <h2>Cycle diagram</h2>
+          <p>Choose an element for details</p>
+        </div>
+        <div class="diagram" id="diagram" data-cycle="both" role="group" aria-label="Five element diagram">
+          <svg id="cycle-lines" viewBox="0 0 600 600" aria-hidden="true">
+            <defs>
+              <marker id="generate-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10 2.5 5Z" fill="currentColor"/></marker>
+              <marker id="control-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10 2.5 5Z" fill="currentColor"/></marker>
+            </defs>
+            <g class="guides"><circle cx="300" cy="284" r="207"/><circle cx="300" cy="284" r="196"/></g>
+          </svg>
+          <div class="diagram-seal" lang="zh" aria-hidden="true">五行</div>
+          <noscript><p>Enable JavaScript to explore the diagram.</p></noscript>
+        </div>
+        <div class="cycle-filter" role="group" aria-label="Show cycle">
+          <button type="button" data-cycle="both" aria-pressed="true">Both</button>
+          <button type="button" data-cycle="generate" aria-pressed="false"><span class="line-key" aria-hidden="true"></span> Creation</button>
+          <button type="button" data-cycle="control" aria-pressed="false"><span class="line-key" aria-hidden="true"></span> Destruction</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cycles" class="cycle-notes" aria-label="Cycle sequences">
+      <article>
+        <h2><span lang="zh">生</span> Creation</h2>
+        <p>Each phase generates the next. This is the shēng cycle.</p>
+        <p class="sequence" id="generate-sequence"></p>
+      </article>
+      <article>
+        <h2><span lang="zh">克</span> Destruction</h2>
+        <p>Each phase restrains another. This is the kè cycle, also called the controlling cycle.</p>
+        <p class="sequence" id="control-sequence"></p>
+      </article>
+    </section>
+
+    <footer id="sources">
+      <details>
+        <summary>Sources and terminology</summary>
+        <p>The organ names refer to traditional zàng (臟) and fǔ (腑) systems. Animal correspondences are specific to the selected practice and can vary between lineages.</p>
+        <ul>
+          <li><a href="https://iris.who.int/handle/10665/352306">WHO International Standard Terminologies on Traditional Chinese Medicine</a></li>
+          <li><a href="https://api.pageplace.de/preview/DT0400.9781420071931_A24500555/preview-9781420071931_A24500555.pdf">Functional Foods of the East · Five-phase correspondence table</a></li>
+          <li><a href="https://www.china-taichi-guide.com/Taichi-Schools-Teachers/Five-Animal-Exercises.pdf">Wang Zhi Ping Tai Ji &amp; Qi Gong Health Centre · Five Animal Frolics</a></li>
+          <li><a href="https://www.academia.edu/86654415/Five_Animals_of_Shaolin_Dissemination_and_Context">Enrico Storti · Sēngmén animal associations in Five Animals of Shaolin</a></li>
+          <li><a href="https://brennantranslation.wordpress.com/2015/05/01/the-xingyi-manual-of-sun-lutang/">Sun Lutang · The Xingyi Manual, translated by Paul Brennan</a></li>
+        </ul>
+      </details>
+    </footer>
+  </main>
+
+  <dialog id="element-details" aria-labelledby="element-title">
+    <form method="dialog"><button class="close" aria-label="Close element details" autofocus>×</button></form>
+    <div id="detail-content"></div>
+  </dialog>
+</body>
+</html>
