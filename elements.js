@@ -13,6 +13,11 @@ const practices = {
     note: 'Wǔ Qín Xì is a qigong practice built around the movements of five animals. This mapping follows the Wang Zhi Ping Tai Ji & Qi Gong Health Centre.',
     forms: ['Tiger', 'Monkey', 'Bear', 'Bird', 'Deer'],
   },
+  'hung-gar': {
+    title: 'Hung Gar', label: 'Animal',
+    note: 'This Hung Gar mapping pairs each phase with one of the five animals.',
+    forms: ['Leopard', 'Tiger', 'Snake', 'Crane', 'Dragon'],
+  },
   sengmen: {
     title: 'Sēngmén Five Animal Fists', label: 'Animal',
     note: 'This mapping follows the Five Elements boxing curriculum of the Sēngmén school in Sichuan.',

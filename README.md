@@ -1,6 +1,6 @@
 # Five Elements · Wǔ Xíng
 
-An interactive reference for the five phases in traditional Chinese medicine and their correspondences in Five Animal Frolics, Sēngmén Five Animal Fists, and Xíngyìquán Five Fists.
+An interactive reference for the five phases in traditional Chinese medicine and their correspondences in Five Animal Frolics, Hung Gar, Sēngmén Five Animal Fists, and Xíngyìquán Five Fists.
 
 [Open the guide](https://nortonmd.github.io/FiveElements/)
 
